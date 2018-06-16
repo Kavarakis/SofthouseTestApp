@@ -1,0 +1,46 @@
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col-md-4">
+			<img ng-src="{{user.avatar_url}}" name="aboutme" width="140" height="140" class="img-circle">
+			<h3>{{user.name}}</h3>
+			<label for="">Profile:</label>
+			<br>
+			<input type="text" value="{{user.html_url}}" id="myInput">
+		</div>
+	</div>
+</div>
+<form class="my-2" ng-submit="save($event)">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Repository Name</th>
+				<th scope="col">Description</th>
+				<th scope="col">Stars</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="repo in repos track by $index">
+				<th scope="row">{{$index+1}}</th>
+				<td>
+					<input type="text" ng-model="repos[$index].name">
+				</td>
+				<td>
+					<input type="text" ng-model="repos[$index].description">
+				</td>
+				<td>
+					<input type="number" ng-model="repos[$index].stargazers_count">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="my-2 row justify-content-center">
+		<div class=" wrapper col-md-4 text-center">
+			<span class="group-btn">
+				<button class="my-1 btn btn-primary">Save
+					<i class="fa fa-sign-in"></i>
+				</button>
+			</span>
+		</div>
+	</div>
+</form>
