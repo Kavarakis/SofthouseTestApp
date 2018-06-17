@@ -16,9 +16,6 @@ angular.module('HomeCtrl', ['appServices'])
 							})
 						});
 				});
-
-			// $scope.formData = {};
-
 			$scope.save = function (event) {
 				event.preventDefault();
 				$http.post('/api/write', $scope.repos)

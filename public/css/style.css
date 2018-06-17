@@ -1,0 +1,5 @@
+.img-circle {
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.425);
+    padding: 2px;
+}
