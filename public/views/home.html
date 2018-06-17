@@ -1,5 +1,5 @@
 <div class="container" ng-cloak>
-	<div class="row justify-content-center">
+	<div ng-show="user" class="row justify-content-center">
 		<div class="col-md-4 text-center">
 			<img ng-src="{{user.avatar_url}}" name="aboutme" height="200" class="my-2 img-circle img-responsive">
 			<h3>{{user.name}}</h3>
@@ -9,7 +9,7 @@
 		</div>
 	</div>
 
-	<form class="my-2 table-responsive-md" ng-submit="save($event)">
+	<form ng-show="repos" class="my-2 table-responsive-md" ng-submit="save($event)">
 		<table class="table table-striped">
 			<thead>
 				<tr>

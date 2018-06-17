@@ -4,10 +4,9 @@ module.exports = (req, res) => {
     try {
         fs.writeFile('jsonFile.json', data, (err) => {
             if (err) throw err;
-            res.status(200).json({
-                message: 'Successfully saved on disk!',
-                data: data
-            });
+            res.status(200).json(
+                'Successfully saved on disk!'
+            );
         });
     } catch (err) {
         res.status(500).json({

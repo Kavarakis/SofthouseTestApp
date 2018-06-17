@@ -25,7 +25,6 @@ angular.module('appServices')
             }
             return $http.get((url + 'users/' + $rootScope.username))
                 .then((response) => {
-                    $rootScope.userData = response.data;
                     let user_details = {
                         avatar_url: response.data.avatar_url,
                         name: response.data.name,
@@ -41,7 +40,7 @@ angular.module('appServices')
         };
         githubService.getRepos = () => {
 
-            return $http.get($rootScope.userData.repos_url)
+            return $http.get((url + 'users/' + $rootScope.username + '/repos'))
                 .then((response) => {
                     return response;
                 })
