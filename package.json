@@ -1,7 +1,7 @@
 {
   "name": "softhouse_test_app",
   "version": "1.0.0",
-  "description": "TEST - Reads a collection of data from any rest api source. - AngularJS",
+  "description": "TEST2 - Reads a collection of data from any rest api source. - AngularJS",
   "main": "server.js",
   "author": "Semir Salkic",
   "license": "MIT",
