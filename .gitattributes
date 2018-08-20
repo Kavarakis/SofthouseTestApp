@@ -1,2 +1,2 @@
-public/index.html lockable
-package.json lockable
+package.json merge=ours
+public/index.html merge=ours 
